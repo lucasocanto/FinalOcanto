@@ -48,8 +48,8 @@ class GoogleAuthFragment : Fragment(),
 
         binding.signInButton.setOnClickListener {
             startActivityForResult(googleSignInClient.signInIntent, RC_SIGN_IN)
+            binding.replaceFragmentButton.setOnClickListener { checkAuthTaskResult() }
         }
-        binding.replaceFragmentButton.setOnClickListener { checkAuthTaskResult() }
     }
 
     override fun onDestroyView() {
@@ -74,15 +74,15 @@ class GoogleAuthFragment : Fragment(),
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == RC_SIGN_IN && resultCode == Activity.RESULT_OK)
+        if (requestCode == RC_SIGN_IN && resultCode == Activity.RESULT_OK){
             viewModel.launchSignIn(gso, GoogleSignIn.getSignedInAccountFromIntent(data))
+        }
     }
 
     override fun checkAuthTaskResult() {
         viewModel.getAuthTaskResult()
         viewModel.authTaskResult.observe(requireActivity(), Observer {
             if (it) replaceFragment()
-            else showToast(R.string.lier)
         })
     }
 
