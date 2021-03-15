@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FinalOcanto</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="target_avchived">anda la osa</string>
+    <string name="target_unachived">nop</string>
+    <string name="set_target">Qué meta quiere cumplir?</string>
+    <string name="years_target">En cuantos años?</string>
+    <string name="done">Listo!</string>
+    <string name="title_google_auth">Inicia sesión con Google no seas cobarde</string>
+    <string name="sign_in_failed">Fallo la autentificación</string>
+    <string name="text_missing">Completa ambos campos Abel</string>
+    <string name="ok_loged">ahí ta</string>
+    <string name="lier">Deja de mentir Abel</string>
+    <string name="extra_info">No hay animación tomelo o dejelo</string>
+    <string name="extra_info_2">Tampo lo quiero guardar en Room xd</string>
+</resources>

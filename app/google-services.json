@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "575354869172",
+    "project_id": "finalutn-a5124",
+    "storage_bucket": "finalutn-a5124.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575354869172:android:c4a41fd9406f8d8fb18ee1",
+        "android_client_info": {
+          "package_name": "com.example.finalocanto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "575354869172-nsp0mnaqpbhggk8k3k154fugb13o38n8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finalocanto",
+            "certificate_hash": "e41a6ff97f681c22eea8729cf8eaa1bcc35272c8"
+          }
+        },
+        {
+          "client_id": "575354869172-ci188n8a8iaktno474kcb06vo4mht62r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOX_m1Pg8g9ZkHQt0VrV0G5O_7LY2NBkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "575354869172-ci188n8a8iaktno474kcb06vo4mht62r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/googleAuthFragment">
+
+    <fragment
+        android:id="@+id/googleAuthFragment"
+        android:name="com.example.finalocanto.ui.auth.GoogleAuthFragment"
+        android:label="google_auth_fragment"
+        tools:layout="@layout/fragment_google_auth">
+        <action
+            android:id="@+id/action_googleAuthFragment_to_targetFragment"
+            app:destination="@id/targetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/targetFragment"
+        android:name="com.example.finalocanto.ui.target.TargetFragment"
+        android:label="target_fragment"
+        tools:layout="@layout/fragment_target"/>
+</navigation>
