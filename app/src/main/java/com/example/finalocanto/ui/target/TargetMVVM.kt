@@ -8,6 +8,7 @@ interface TargetMVVM {
     }
     interface View{
         fun submitTargetDone()
+        fun saveTarget()
         fun updateUI()
         fun showToast(textResource: Int)
     }

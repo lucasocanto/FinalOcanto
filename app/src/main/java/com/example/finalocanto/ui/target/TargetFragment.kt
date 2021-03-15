@@ -39,12 +39,18 @@ class TargetFragment : Fragment(), TargetMVVM.View {
     }
 
     override fun submitTargetDone() {
-        if (binding.editTextTarget.text.isNotBlank() && binding.editTextYearsTarget.text.isNotBlank()) updateUI()
+        if (binding.editTextTarget.text.isNotBlank() && binding.editTextYearsTarget.text.isNotBlank()){
+            saveTarget()
+            updateUI()
+        }
         else showToast(R.string.text_missing)
     }
 
-    override fun updateUI() {
+    override fun saveTarget() {
         viewModel.setTargetDone(binding.editTextTarget.text.toString(), binding.editTextYearsTarget.text.toString())
+    }
+
+    override fun updateUI() {
         binding.editTextTarget.text.clear()
         binding.editTextYearsTarget.text.clear()
         binding.editTextTarget.hint = getString(R.string.target_avchived)
