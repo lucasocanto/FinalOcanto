@@ -14,7 +14,7 @@ interface GoogleAuthMVVM {
         fun checkForLoggedUser()
         fun initializeGoogleSignIn()
         fun checkAuthTaskResult()
-        fun replaceFragment()
+        fun replaceFragment(boolean: Boolean)
         fun showToast(textResource: Int)
     }
     interface ViewModel{

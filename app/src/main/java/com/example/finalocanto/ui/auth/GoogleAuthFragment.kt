@@ -59,9 +59,7 @@ class GoogleAuthFragment : Fragment(),
 
     override fun checkForLoggedUser() {
         viewModel.checkUserConnection()
-        viewModel.userConnection.observe(requireActivity(), Observer {
-            if (it) replaceFragment()
-        })
+        viewModel.userConnection.observe(requireActivity(), Observer { replaceFragment(it) })
     }
 
     override fun initializeGoogleSignIn() {
@@ -74,23 +72,22 @@ class GoogleAuthFragment : Fragment(),
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == RC_SIGN_IN && resultCode == Activity.RESULT_OK){
+        if (requestCode == RC_SIGN_IN && resultCode == Activity.RESULT_OK)
             viewModel.launchSignIn(gso, GoogleSignIn.getSignedInAccountFromIntent(data))
-        }
     }
 
     override fun checkAuthTaskResult() {
         viewModel.getAuthTaskResult()
-        viewModel.authTaskResult.observe(requireActivity(), Observer {
-            if (it) replaceFragment()
-        })
+        viewModel.authTaskResult.observe(requireActivity(), Observer { replaceFragment(it)})
     }
 
-    override fun replaceFragment() {
-        findNavController().navigate(R.id.action_googleAuthFragment_to_targetFragment)
+    override fun replaceFragment(result: Boolean) {
+        if (result) findNavController().navigate(R.id.action_googleAuthFragment_to_targetFragment)
     }
 
     override fun showToast(textResource: Int) {
         Toast.makeText(requireContext(), getString(textResource), Toast.LENGTH_SHORT).show()
     }
 }
+
+//holis
